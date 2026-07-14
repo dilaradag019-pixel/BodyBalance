@@ -126,17 +126,16 @@ let currentMenu ="";
 // SETUP
 //--------------------------------------------------
 
+
 function setup() {
-  // Canvas'ı oluştur ve bir değişkene ata
-  let cnv = createCanvas(min(windowWidth, 390), min(windowHeight, 844));
-  
-  // Canvas'ı tarayıcıda ortalamak için CSS stilleri
-  cnv.style('display', 'block');
-  cnv.style('margin', 'auto');
-  
+
+  let cnv = createCanvas(390,844);
+
+  cnv.style("display","block");
+  cnv.style("margin","auto");
+
   textFont("Arial");
-  
-  // Arayüz elementlerini sadece bir kez oluştur
+
   createWelcomeUI();
 
   generatePulseAnalysis();
@@ -144,7 +143,6 @@ function setup() {
   generatePulseEvaluation();
 
 }
-
 
 
 //--------------------------------------------------
