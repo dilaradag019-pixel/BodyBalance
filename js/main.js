@@ -126,16 +126,17 @@ let currentMenu ="";
 // SETUP
 //--------------------------------------------------
 
-
 function setup() {
-
-  let cnv = createCanvas(390,844);
-
-  cnv.style("display","block");
-  cnv.style("margin","auto");
-
+  // Canvas'ı oluştur ve bir değişkene ata
+  let cnv = createCanvas(min(windowWidth, 390), min(windowHeight, 844));
+  
+  // Canvas'ı tarayıcıda ortalamak için CSS stilleri
+  cnv.style('display', 'block');
+  cnv.style('margin', 'auto');
+  
   textFont("Arial");
-
+  
+  // Arayüz elementlerini sadece bir kez oluştur
   createWelcomeUI();
 
   generatePulseAnalysis();
@@ -143,6 +144,7 @@ function setup() {
   generatePulseEvaluation();
 
 }
+
 
 
 //--------------------------------------------------
@@ -2128,6 +2130,8 @@ function saveUserData(){
 
   alert("✔ Veriler başarıyla kaydedildi.");
 
+  updatePulseAI();
+
 }
 
 function resetUserData(){
@@ -2295,7 +2299,6 @@ function drawSaveData(){
 
   text("💾 Kaydet",width/2,638);
 
-  
 
   pop();
 
